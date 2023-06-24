@@ -42,7 +42,7 @@ def load_chat():
             st.markdown("---", unsafe_allow_html=True)
             st.write('Realiza una pregunta por texto o por audio sobre el capitulo')
             audio = audiorecorder("Grabar audio", "Stop")
-            user_audio = False
+            user_audio = ''
             if len(audio) > 0:
                 st.audio(audio.tobytes())
                 # To save audio to a file:
@@ -50,12 +50,13 @@ def load_chat():
                 wav_file.write(audio.tobytes())
             with st.form(key='my_form', clear_on_submit=True):
                 # Whisper
-                output = model.transcribe("audio.mp3")
-                user_audio = output['text']
+                if os.path.exists("audio.mp3"):
+                    output = model.transcribe("audio.mp3")
+                    user_audio = output['text']
                 user_input = st.text_area("", key='input', height=100)
                 submit_button = st.form_submit_button(label='Enviar pregunta')
 
-            if submit_button and (user_input or user_audio):
+            if submit_button and (user_input or user_audio != ''):
                 if os.path.exists("audio.mp3"):
                     os.remove("audio.mp3")
                 output, total_tokens, prompt_tokens, completion_tokens = generate_response(agent_id_cap_7, user_input, user_audio)
