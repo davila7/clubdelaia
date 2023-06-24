@@ -97,8 +97,6 @@ def generate_response(agent_id, text_input, audio_input):
             if raw_data != "[DONE]":
                 try:
                     json_object = json.loads(raw_data.strip())
-                    print()
-                    json_object = json.loads(raw_data.strip())
                     token += json_object['data']
                 except json.JSONDecodeError as e:
                     print(f"Error al cargar el JSON: {e}")
