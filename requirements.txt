@@ -3,5 +3,7 @@ langchain
 streamlit_chat
 streamlit
 requests
+portaudio19-dev 
+python3-pyaudio
 audiorecorder
 git+https://github.com/openai/whisper.git
