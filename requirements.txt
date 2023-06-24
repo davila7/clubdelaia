@@ -1,0 +1,7 @@
+python-dotenv
+langchain
+streamlit_chat
+streamlit
+requests
+audiorecorder
+git+https://github.com/openai/whisper.git
