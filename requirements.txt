@@ -4,5 +4,4 @@ streamlit_chat
 streamlit_audiorecorder
 streamlit
 requests
-pyaudio
 git+https://github.com/openai/whisper.git
