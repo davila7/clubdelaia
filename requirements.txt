@@ -1,8 +1,8 @@
 python-dotenv
 langchain
 streamlit_chat
+streamlit_audiorecorder
 streamlit
 requests
 pyaudio
-audiorecorder
 git+https://github.com/openai/whisper.git
