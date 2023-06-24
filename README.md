@@ -1,6 +1,6 @@
 ---
-title: Clubdelaia
-emoji: 🐨
+title: Club de la IA
+emoji: 🎙️
 colorFrom: pink
 colorTo: pink
 sdk: streamlit
@@ -10,4 +10,4 @@ pinned: false
 license: mit
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+Powered By [Judini.ai](https://judini.ai)
